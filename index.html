@@ -24,8 +24,11 @@
 <input type="radio" name="nav" id="portfolionav">
 <input type="radio" name="nav" id="contactnav">
 <input type="radio" name="nav" id="linksnav">
+<input type="checkbox" name="nav-toggle" id="nav-toggle">
 
 <i id="loader"></i>
+
+<label for="nav-toggle" id="nav-toggle-label"> </label>
 
 <nav class="main-menu">
 
@@ -509,12 +512,12 @@
   </div>
 </section>
 
-<a href="#" id="mobileDeselect"></a>
 
 <script type="text/javascript">
   window.onload = function() { 
       document.querySelectorAll("nav").forEach(element => element.style.display="grid")
       document.querySelectorAll("section").forEach(element => element.style.display="grid")
+      document.getElementById("nav-toggle-label").style.display="block"
       document.getElementById("loader").style.display="none"
       
   };

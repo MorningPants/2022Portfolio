@@ -109,9 +109,31 @@ body {
   background-attachment: fixed;
   overflow: hidden;
 }
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   display: none;
 }
+
+#nav-toggle-label{
+ position: fixed;
+ left: 1vw;
+ top: 1vh;
+ width: 50px;
+ height: 50px;
+ z-index: 3;
+ background: transparent;
+
+}
+
+#nav-toggle:checked ~ #nav-toggle-label{
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: transparent;
+}
+
 .main-menu {
   display: grid;
   grid-template-columns: 1fr 0 1fr 0;
@@ -149,7 +171,7 @@ input[type="radio"] {
   line-height: 0;
 }
 
-.main-menu:hover label {
+#nav-toggle:checked ~ .main-menu label {
   height: 50px;
   width: 50px;
   border-radius: 20%;
@@ -165,7 +187,7 @@ input[type="radio"] {
   color: white;
 }
 
-.main-menu:hover {
+#nav-toggle:checked ~ .main-menu {
   width: 190px;
   cursor: auto;
   left: 2vw;
@@ -841,22 +863,9 @@ iframe{
 
 }
 
-#mobileDeselect{
-  display: none;
-}
 
-nav:hover ~ #mobileDeselect{
-  display: block;
-  position:absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  background: transparent;
-}
 
-nav, section, .main-menu{
+nav, section, .main-menu, #nav-toggle-label{
   display: none;
 }
 
