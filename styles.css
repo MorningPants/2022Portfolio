@@ -841,6 +841,19 @@ iframe{
 
 }
 
+#mobileDeselect{
+  display: none;
+}
+
+nav:hover ~ #mobileDeselect{
+  display: block;
+  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
 nav, section, .main-menu{
   display: none;
 }
