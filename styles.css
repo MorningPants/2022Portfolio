@@ -104,7 +104,7 @@
 }
 
 body {
-  background: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1759-1024x683.jpg");
+  background: url("Assets/nightsky.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
@@ -133,7 +133,7 @@ input[type="radio"] {
 
 .main-menu > label {
   cursor: pointer;
-  background: white;
+  background-color: white;
   position: relative;
   color: transparent;
   display: inline-block;
@@ -143,7 +143,7 @@ input[type="radio"] {
   padding: 0;
   font-size: 10px;
   overflow: hidden;
-  transition: all 0.5s ease-in-out, background 0.3s ease-out;
+  transition: all 0.5s ease-in-out, background-color 0.3s ease-out;
   clip-path: var(--squircle);
   text-align: center;
   line-height: 0;
@@ -294,25 +294,24 @@ label[for="linksnav"] + p {
 }
 
 #home {
-  background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1727-1024x1536.jpg");
+  background-image: url("Assets/trees.jpg");
 }
 
 #workflow {
-  background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1276-1024x683.jpeg");
+  background-image: url("Assets/waterfall.jpeg");
 }
 #resume {
-  background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1916-1024x683.jpg");
+  background-image: url("Assets/clouds.jpg");
 }
 #contact {
-  background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1956-1024x683.jpg");
+  background-image: url("Assets/leaves.jpg");
 }
 #links {
-  background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-318-1024x683.jpeg");
-
+  background-image: url("Assets/stars.jpeg");
   background-position: center;
 }
 #portfolio {
-  background-image: url("https://freenaturestock.com/wp-content/uploads/freenaturestock-1724-1024x683.jpg");
+  background-image: url("Assets/flower.jpg");
 }
 .fa-li {
   font-size: 1.3em;
@@ -840,4 +839,64 @@ iframe{
   width:830px;
   height:970px;
 
+}
+
+nav, section, .main-menu{
+  display: none;
+}
+
+#loader{
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+    animation-duration: 3s;
+  animation-name: ping;
+  animation-iteration-count: infinite;
+  animation-delay:.5s;
+  animation-timing-function: linear;
+}
+#loader::before{
+  content:'';
+  display: inline-block;
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(-100px, 0);
+    animation-duration: 3s;
+  animation-name: ping;
+  animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+#loader::after{
+  content:'';
+  display: inline-block;
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(100px, -34px);
+  animation-duration: 3s;
+  animation-name: ping;
+  animation-iteration-count: infinite;
+  animation-delay:1s;
+  animation-timing-function: linear;
+}
+
+@keyframes ping {
+  50% {
+  box-shadow: 0 0 0 0 black,
+    0 0 1px 0 white;
+  }
+
+ 70% {
+      box-shadow: 0 0 0 8px black,
+    0 0 1px 10px white;
+  }
+    to {
+      box-shadow: 0 0 0 20px black,
+    0 0 4px 15px white;
+  }
 }
