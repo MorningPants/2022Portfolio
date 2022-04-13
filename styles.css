@@ -117,10 +117,11 @@ input[type="radio"], input[type="checkbox"] {
  position: fixed;
  left: 1vw;
  top: 1vh;
- width: 50px;
- height: 50px;
+ width: 70px;
+ height: 60px;
  z-index: 3;
  background: transparent;
+ cursor: pointer;
 
 }
 
@@ -132,13 +133,15 @@ input[type="radio"], input[type="checkbox"] {
   top: 0;
   z-index: 1;
   background: transparent;
+  
+  cursor: auto;
+
 }
 
 .main-menu {
   display: grid;
   grid-template-columns: 1fr 0 1fr 0;
   gap: 10px 0;
-  cursor: pointer;
   position: fixed;
   left: 1vw;
   top: 1vh;
@@ -182,7 +185,7 @@ input[type="radio"], input[type="checkbox"] {
   line-height: 3;
 }
 
-.main-menu label:hover {
+#nav-toggle:checked ~ .main-menu label:hover {
   background: darkblue;
   color: white;
 }
@@ -283,26 +286,26 @@ section > div {
   transform: none;
 }
 
-#homenav:checked ~ nav:hover label[for="homenav"],
-#workflownav:checked ~ nav:hover label[for="workflownav"],
-#resumenav:checked ~ nav:hover label[for="resumenav"],
-#portfolionav:checked ~ nav:hover label[for="portfolionav"],
-#contactnav:checked ~ nav:hover label[for="contactnav"],
-#linksnav:checked ~ nav:hover label[for="linksnav"] {
+#homenav:checked ~ #nav-toggle:checked ~ nav label[for="homenav"],
+#workflownav:checked ~ #nav-toggle:checked ~ nav label[for="workflownav"],
+#resumenav:checked ~ #nav-toggle:checked ~ nav label[for="resumenav"],
+#portfolionav:checked ~ #nav-toggle:checked ~ nav label[for="portfolionav"],
+#contactnav:checked ~ #nav-toggle:checked ~  nav label[for="contactnav"],
+#linksnav:checked ~ #nav-toggle:checked ~ nav label[for="linksnav"] {
   color: white;
   background: blue;
 }
-#linksnav:checked ~ nav:hover label[for="linksnav"] {
+#linksnav:checked ~ #nav-toggle:checked ~ nav label[for="linksnav"] {
   color: gold;
 }
 
-#homenav:checked ~ nav:hover label[for="homenav"] + p,
-#workflownav:checked ~ nav:hover label[for="workflownav"] + p,
-#resumenav:checked ~ nav:hover label[for="resumenav"] + p,
-#portfolionav:checked ~ nav:hover label[for="portfolionav"] + p,
-#contactnav:checked ~ nav:hover label[for="contactnav"] + p,
-#linksnav:checked ~ nav:hover label[for="linksnav"] + p,
-label:hover + p {
+#homenav:checked ~ #nav-toggle:checked ~ nav label[for="homenav"] + p,
+#workflownav:checked ~ #nav-toggle:checked ~ nav label[for="workflownav"] + p,
+#resumenav:checked ~ #nav-toggle:checked ~ nav label[for="resumenav"] + p,
+#portfolionav:checked ~ #nav-toggle:checked ~ nav label[for="portfolionav"] + p,
+#contactnav:checked ~ #nav-toggle:checked ~ nav label[for="contactnav"] + p,
+#linksnav:checked ~ #nav-toggle:checked ~ nav label[for="linksnav"] + p,
+#nav-toggle:checked ~ nav label:hover + p {
   opacity: 1;
   top: 0px;
   color: white;
@@ -311,7 +314,7 @@ label:hover + p {
   font-size: 16px;
   transform: translate(-50px, 80px) !important;
 }
-label[for="linksnav"] + p {
+#nav-toggle:checked ~ nav label[for="linksnav"]:hover + p {
   color: gold;
 }
 
@@ -724,9 +727,6 @@ h2 {
   justify-content: center;
 }
 
-.image-box{
-/*   max-width: 400px; */
-}
 
 #workflow p{
   margin: 0;
