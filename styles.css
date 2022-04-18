@@ -109,33 +109,32 @@ body {
   background-attachment: fixed;
   overflow: hidden;
 }
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
   display: none;
 }
 
-#nav-toggle-label{
- position: fixed;
- left: 1vw;
- top: 1vh;
- width: 70px;
- height: 60px;
- z-index: 3;
- background: transparent;
- cursor: pointer;
-
+#nav-toggle-label {
+  position: fixed;
+  left: 1vw;
+  top: 1vh;
+  width: 70px;
+  height: 60px;
+  z-index: 3;
+  background: transparent;
+  cursor: pointer;
 }
 
-#nav-toggle:checked ~ #nav-toggle-label{
-  position:absolute;
+#nav-toggle:checked ~ #nav-toggle-label {
+  position: absolute;
   width: 100vw;
   height: 100vh;
   left: 0;
   top: 0;
   z-index: 1;
   background: transparent;
-  
-  cursor: auto;
 
+  cursor: auto;
 }
 
 .main-menu {
@@ -224,7 +223,8 @@ h1 {
 }
 p,
 h2,
-a, figcaption {
+a,
+figcaption {
   font-family: MD Primer Bold, Rubik, Lato, Lucida Grande, Lucida Sans Unicode,
     Tahoma, Sans-Serif;
 }
@@ -290,7 +290,7 @@ section > div {
 #workflownav:checked ~ #nav-toggle:checked ~ nav label[for="workflownav"],
 #resumenav:checked ~ #nav-toggle:checked ~ nav label[for="resumenav"],
 #portfolionav:checked ~ #nav-toggle:checked ~ nav label[for="portfolionav"],
-#contactnav:checked ~ #nav-toggle:checked ~  nav label[for="contactnav"],
+#contactnav:checked ~ #nav-toggle:checked ~ nav label[for="contactnav"],
 #linksnav:checked ~ #nav-toggle:checked ~ nav label[for="linksnav"] {
   color: white;
   background: blue;
@@ -379,8 +379,9 @@ p {
   width: clamp(100%, max-content);
   border: 1px solid red;
   border-radius: 40px;
-    width: min(73vw, 400px);
-    padding: 10px min(40px, 1vw);  transition: all 0.5s ease;
+  width: min(73vw, 400px);
+  padding: 10px min(40px, 1vw);
+  transition: all 0.5s ease;
 }
 .fa-ul:hover {
   background: rgba(200, 0, 0, 0.2);
@@ -487,11 +488,12 @@ section > div {
   height: 180px;
   border-radius: 20px;
 }
-#portfolio a, #resume a {
+#portfolio a,
+#resume a {
   background-color: transparent;
   border: none;
 }
-#portfolio h3{
+#portfolio h3 {
   color: black;
 }
 
@@ -533,7 +535,7 @@ section > div {
 }
 
 .flip-card-front {
-  background: linear-gradient(to bottom left, gold,  white, gold);
+  background: linear-gradient(to bottom left, gold, white, gold);
   box-shadow: inset -10px -10px 10px gold;
   color: black;
   z-index: 2;
@@ -544,7 +546,7 @@ section > div {
 }
 
 .flip-card-back {
-  background: linear-gradient(to bottom right, gold,  white, gold);
+  background: linear-gradient(to bottom right, gold, white, gold);
   box-shadow: inset -10px -10px 10px gold;
   color: black;
   transform: rotateY(180deg);
@@ -721,181 +723,275 @@ h2 {
   position: relative;
   width: auto;
 }
-.calligraphy, .image-box {
+.calligraphy,
+.image-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
-#workflow p{
+#workflow p {
   margin: 0;
   justify-self: flex-start;
 }
 
-figure{
+figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:1em;
+  margin: 1em;
   transition: all 0.5s ease;
 }
 
-
-.icon{
+.icon {
   width: 3em;
   transition: all 3s ease;
   display: block;
 }
 
-figcaption{
+figcaption {
   visibility: hidden;
   position: absolute;
   bottom: -1.8em;
   width: max-content;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   border: 1px solid white;
   border-radius: 1em;
   padding: 0 1em;
 }
-figure:hover > figcaption{
+figure:hover > figcaption {
   visibility: visible;
 }
-figure:hover{
+figure:hover {
   z-index: 4;
   transform: scale(1.3);
-  
 }
 
-.invert{
+.invert {
   filter: invert(1);
 }
 
-
-
-#workflownav:not(:checked) ~ section figure{
+#workflownav:not(:checked) ~ section figure {
   transform: scale(2);
   opacity: 0;
 }
 
-hr{
+hr {
   color: white;
   width: 70vw;
 }
 
+:nth-of-type(1) {
+  --nth-child: 1;
+}
+:nth-of-type(2) {
+  --nth-child: 2;
+}
+:nth-of-type(3) {
+  --nth-child: 3;
+}
+:nth-of-type(4) {
+  --nth-child: 4;
+}
+:nth-of-type(5) {
+  --nth-child: 5;
+}
+:nth-of-type(6) {
+  --nth-child: 6;
+}
+:nth-of-type(7) {
+  --nth-child: 7;
+}
+:nth-of-type(8) {
+  --nth-child: 8;
+}
+:nth-of-type(9) {
+  --nth-child: 9;
+}
+:nth-of-type(10) {
+  --nth-child: 10;
+}
+:nth-of-type(11) {
+  --nth-child: 11;
+}
+:nth-of-type(12) {
+  --nth-child: 12;
+}
+:nth-of-type(13) {
+  --nth-child: 13;
+}
+:nth-of-type(14) {
+  --nth-child: 14;
+}
+:nth-of-type(15) {
+  --nth-child: 15;
+}
+:nth-of-type(16) {
+  --nth-child: 16;
+}
+:nth-of-type(17) {
+  --nth-child: 17;
+}
+:nth-of-type(18) {
+  --nth-child: 18;
+}
+:nth-of-type(19) {
+  --nth-child: 19;
+}
+:nth-of-type(20) {
+  --nth-child: 20;
+}
+:nth-of-type(21) {
+  --nth-child: 21;
+}
+:nth-of-type(22) {
+  --nth-child: 22;
+}
+:nth-of-type(23) {
+  --nth-child: 23;
+}
+:nth-of-type(24) {
+  --nth-child: 24;
+}
+:nth-of-type(25) {
+  --nth-child: 25;
+}
+:nth-of-type(26) {
+  --nth-child: 26;
+}
+:nth-of-type(27) {
+  --nth-child: 27;
+}
+:nth-of-type(28) {
+  --nth-child: 28;
+}
+:nth-of-type(29) {
+  --nth-child: 29;
+}
+:nth-of-type(30) {
+  --nth-child: 30;
+}
+:nth-of-type(31) {
+  --nth-child: 31;
+}
+:nth-of-type(32) {
+  --nth-child: 32;
+}
+:nth-of-type(33) {
+  --nth-child: 33;
+}
+:nth-of-type(34) {
+  --nth-child: 34;
+}
+:nth-of-type(35) {
+  --nth-child: 35;
+}
+:nth-of-type(36) {
+  --nth-child: 36;
+}
+:nth-of-type(37) {
+  --nth-child: 37;
+}
+:nth-of-type(38) {
+  --nth-child: 38;
+}
+:nth-of-type(39) {
+  --nth-child: 39;
+}
+:nth-of-type(40) {
+  --nth-child: 40;
+}
 
-:nth-of-type(1) { --nth-child: 1 }
-:nth-of-type(2) { --nth-child: 2 }
-:nth-of-type(3) { --nth-child: 3 }
-:nth-of-type(4) { --nth-child: 4 }
-:nth-of-type(5) { --nth-child: 5 }
-:nth-of-type(6) { --nth-child: 6 }
-:nth-of-type(7) { --nth-child: 7 }
-:nth-of-type(8) { --nth-child: 8 }
-:nth-of-type(9) { --nth-child: 9 }
-:nth-of-type(10) { --nth-child: 10 }
-:nth-of-type(11) { --nth-child: 11 }
-:nth-of-type(12) { --nth-child: 12 }
-:nth-of-type(13) { --nth-child: 13 }
-:nth-of-type(14) { --nth-child: 14 }
-:nth-of-type(15) { --nth-child: 15 }
-:nth-of-type(16) { --nth-child: 16 }
-:nth-of-type(17) { --nth-child: 17 }
-:nth-of-type(18) { --nth-child: 18 }
-:nth-of-type(19) { --nth-child: 19 }
-:nth-of-type(20) { --nth-child: 20 }
-:nth-of-type(21) { --nth-child: 21 }
-:nth-of-type(22) { --nth-child: 22 }
-:nth-of-type(23) { --nth-child: 23 }
-:nth-of-type(24) { --nth-child: 24 }
-:nth-of-type(25) { --nth-child: 25 }
-:nth-of-type(26) { --nth-child: 26 }
-:nth-of-type(27) { --nth-child: 27 }
-:nth-of-type(28) { --nth-child: 28 }
-:nth-of-type(29) { --nth-child: 29 }
-:nth-of-type(30) { --nth-child: 30 }
-:nth-of-type(31) { --nth-child: 31 }
-:nth-of-type(32) { --nth-child: 32 }
-:nth-of-type(33) { --nth-child: 33 }
-:nth-of-type(34) { --nth-child: 34 }
-:nth-of-type(35) { --nth-child: 35 }
-:nth-of-type(36) { --nth-child: 36 }
-:nth-of-type(37) { --nth-child: 37 }
-:nth-of-type(38) { --nth-child: 38 }
-:nth-of-type(39) { --nth-child: 39 }
-:nth-of-type(40) { --nth-child: 40 }
-
-#workflownav:checked ~ section figure{
-opacity: 0;
-  animation: fade-in .5s calc( var(--nth-child) * .1s + .7s)  forwards, drop-in .5s calc( var(--nth-child) * .1s + .7s);
+#workflownav:checked ~ section figure {
+  opacity: 0;
+  animation: fade-in 0.5s calc(var(--nth-child) * 0.1s + 0.7s) forwards,
+    drop-in 0.5s calc(var(--nth-child) * 0.1s + 0.7s);
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
   }
-  to { 
-    opacity: 1;}
-}
-@keyframes drop-in{
-    from {
-  transform: scale(3) translateY(-20px);
+  to {
+    opacity: 1;
   }
-  to { 
-  transform: none;}
 }
-@media only screen and (max-width: 1130px){
-iframe{
-  position: absolute;
-  left:50%;
-  transform: scale(.7) translate(-70%, -20%); 
+@keyframes drop-in {
+  from {
+    transform: scale(3) translateY(-20px);
+  }
+  to {
+    transform: none;
+  }
 }
-  .iframe-wrapper{
+@media only screen and (max-width: 1130px) {
+  iframe {
+    position: absolute;
+    left: 50%;
+    transform: scale(0.7) translate(-70%, -20%);
+  }
+  .iframe-wrapper {
     height: 700px;
-/*     width: 80vh; */
+    /*     width: 80vh; */
   }
 }
 
-
-iframe{
-  width:830px;
-  height:970px;
-
+iframe {
+  width: 830px;
+  height: 970px;
 }
 
-
-
-nav, section, .main-menu, #nav-toggle-label{
+nav,
+section,
+.main-menu,
+#nav-toggle-label,
+#home-content {
   display: none;
 }
 
-#loader{
+#home {
+  display: grid;
+  z-index: -1;
+}
+
+#loaderbg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#loader {
+  z-index: 2;
   background: white;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-    animation-duration: 3s;
+  animation-duration: 3s;
   animation-name: ping;
   animation-iteration-count: infinite;
-  animation-delay:.5s;
+  animation-delay: 0.5s;
   animation-timing-function: linear;
 }
-#loader::before{
-  content:'';
+#loader::before {
+  content: "";
   display: inline-block;
   background: white;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   transform: translate(-100px, 0);
-    animation-duration: 3s;
+  animation-duration: 3s;
   animation-name: ping;
   animation-iteration-count: infinite;
-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
-#loader::after{
-  content:'';
+#loader::after {
+  content: "";
   display: inline-block;
   background: white;
   width: 30px;
@@ -905,22 +1001,19 @@ animation-timing-function: linear;
   animation-duration: 3s;
   animation-name: ping;
   animation-iteration-count: infinite;
-  animation-delay:1s;
+  animation-delay: 1s;
   animation-timing-function: linear;
 }
 
 @keyframes ping {
   50% {
-  box-shadow: 0 0 0 0 black,
-    0 0 1px 0 white;
+    box-shadow: 0 0 0 0 black, 0 0 1px 0 white;
   }
 
- 70% {
-      box-shadow: 0 0 0 8px black,
-    0 0 1px 10px white;
+  70% {
+    box-shadow: 0 0 0 8px black, 0 0 1px 10px white;
   }
-    to {
-      box-shadow: 0 0 0 20px black,
-    0 0 4px 15px white;
+  to {
+    box-shadow: 0 0 0 20px black, 0 0 4px 15px white;
   }
 }

@@ -27,6 +27,7 @@
 <input type="checkbox" name="nav-toggle" id="nav-toggle">
 
 <i id="loader"></i>
+<i id="loaderbg"></i>
 
 <label for="nav-toggle" id="nav-toggle-label"> </label>
 
@@ -53,7 +54,7 @@
 </nav>
 
 <section id="home">
-  <div>
+  <div id="home-content">
     <div class="calligraphy">
       <!--     <h1><i class="fa fa-home"></i> Home</h1> -->
       <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="436.000000pt" max-height="248.000000pt" viewBox="0 0 436.000000 248.000000">
@@ -512,7 +513,9 @@
       document.querySelectorAll("nav").forEach(element => element.style.display="grid")
       document.querySelectorAll("section").forEach(element => element.style.display="grid")
       document.getElementById("nav-toggle-label").style.display="block"
+      document.getElementById("home-content").style.display="block"
       document.getElementById("loader").style.display="none"
+      document.getElementById("loaderbg").style.display="none"
       
   };
 
